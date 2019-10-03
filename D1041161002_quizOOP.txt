@@ -1,0 +1,67 @@
+Modifier
+1)private EditText mMessageEditText;
+2)private TextView mReplyHeadTextView;
+3)protected void onCreate(Bundle savedInstanceState)
+
+Method
+1)final Button buttonTambah = findViewById(R.id.btnTambah);
+  buttonTambah.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mCount++;
+                textCount.setText(Integer.toString(mCount));
+2)final Button buttonKurang = findViewById(R.id.btnKurang);
+  buttonKurang.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mCount--;
+                textCount.setText(Integer.toString(mCount));
+3)public void returnReply(View view) {
+        String reply = mReply.getText().toString();
+        Intent replyIntent = new Intent();
+        replyIntent.putExtra(EXTRA_REPLY, reply);
+        setResult(RESULT_OK, replyIntent);
+        finish();
+    }
+4)final Button buttonKali = findViewById(R.id.btnKali);
+  buttonKali.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mCount--;
+                textCount.setText(Integer.toString(mCount));
+
+Class
+1)public class MainActivity extends AppCompatActivity{}
+2)public class SecondActivity extends AppCompatActivity{}
+ 
+Function
+1)public void returnReply(View view) {
+        String reply = mReply.getText().toString();
+        Intent replyIntent = new Intent();
+        replyIntent.putExtra(EXTRA_REPLY, reply);
+        setResult(RESULT_OK, replyIntent);
+        finish();
+    }
+2)final Button buttonKurang = findViewById(R.id.btnKurang);
+  buttonKurang.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mCount--;
+                textCount.setText(Integer.toString(mCount));
+3)final Button buttonTambah = findViewById(R.id.btnTambah);
+  buttonTambah.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mCount++;
+                textCount.setText(Integer.toString(mCount));
+
+Contructor
+1) name = findViewById(R.id.nama);
+        name.setText("Hallo "+ message);
+2)mReply=findViewById(R.id.editText_second);
+  String reply = mReply.getText().toString();
+   replyIntent.putExtra(EXTRA_REPLY, reply);
+Polimorfisme
+1)Intent intent = new Intent(this, SecondActivity.class);
+2)Intent intent = new Intent(this, TampilanUtama.class);
+3)Intent intent = new Intent(this, TampilanKedua.class);
+Inherritance
+1)public class SecondActivity extends AppCompatActivity{}
+2)public class MainActivity extends AppCompatActivity{}
+3)public class ActivityTwo extends AppCompatActivity{}
+
